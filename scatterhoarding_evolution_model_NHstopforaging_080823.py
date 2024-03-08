@@ -1,29 +1,5 @@
 #!/usr/bin/env python3
 
-''' Model Summary
-
-Population of 20 squirrels each go on 20 foraging bouts each day for 100 days.
-Each squirrel has a chance of predation at the end of each foraging bout.
-If a squirrel does not eat 1 food item by the end of the day, they starve and die.
-Storable food is produced and added to the public food supply at the beginning of 
-the first day (i.e. acorns falling to the ground). If a hoarder has stored food, 
-the squirrel automatically eats that and is satiated before foraging. If the 
-squirrel was not able to eat anything before foraging, they eat the first food 
-they find through foraging. After eating one food item each day, all other foods 
-found are stored, if the animal can store food. Each day, squirrels are all chosen 
-to forage in a random order. When a squirrel forages, a detection probability is 
-calculated and if a random number is less than that prob, the squirrel finds food 
-to harvest. If detection prob < random number, the squirrel is marked as foraged 
-and the next squirrel forages. If the squirrel detected food to harvest, it's 
-either public food or food stored by other hoarders, based on amount of each 
-available. If public food, squirrel eats or stores the food. If the squirrel 
-detected stored food, they steal from another hoarder, depending on proportions 
-of food stored by each other hoarder. After foraging is completed with eating 
-or storing food, they may be eaten by a predator. At the end of each days 20 
-foraging bouts, if the squirrel hasn't eaten any food, it starves and dies.
-
-'''
-
 #Load packages needed for code.
 #
 #    if 'import' doesn't work;
